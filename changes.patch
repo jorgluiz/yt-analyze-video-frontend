@@ -1,0 +1,24 @@
+diff --git a/src/public/index.html b/src/public/index.html
+index 6e6e997..9a1d733 100644
+--- a/src/public/index.html
++++ b/src/public/index.html
+@@ -119,9 +119,9 @@
+       padding: 0 10px;
+     }
+ 
+-    /* .container-analyzed-text {
++    .container-analyzed-text {
+       padding: 50px 20px 0 20px;
+-    } */
++    }
+ 
+     @media (min-width: 767px) {
+       .container-analyzed-text {
+@@ -129,7 +129,6 @@
+         margin: auto;
+         max-width: 950px;
+         padding: 100px;
+-        border: 1px solid red;
+       }
+     }
+   </style>
