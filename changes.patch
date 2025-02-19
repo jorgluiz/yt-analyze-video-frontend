@@ -1,24 +1,57 @@
+diff --git a/changes.patch b/changes.patch
+index 9f208c1..e69de29 100644
+--- a/changes.patch
++++ b/changes.patch
+@@ -1,24 +0,0 @@
+-diff --git a/src/public/index.html b/src/public/index.html
+-index 6e6e997..9a1d733 100644
+---- a/src/public/index.html
+-+++ b/src/public/index.html
+-@@ -119,9 +119,9 @@
+-       padding: 0 10px;
+-     }
+- 
+--    /* .container-analyzed-text {
+-+    .container-analyzed-text {
+-       padding: 50px 20px 0 20px;
+--    } */
+-+    }
+- 
+-     @media (min-width: 767px) {
+-       .container-analyzed-text {
+-@@ -129,7 +129,6 @@
+-         margin: auto;
+-         max-width: 950px;
+-         padding: 100px;
+--        border: 1px solid red;
+-       }
+-     }
+-   </style>
 diff --git a/src/public/index.html b/src/public/index.html
-index 6e6e997..9a1d733 100644
+index 9a1d733..e809156 100644
 --- a/src/public/index.html
 +++ b/src/public/index.html
-@@ -119,9 +119,9 @@
-       padding: 0 10px;
+@@ -67,7 +67,9 @@
+     .container {
+       display: flex;
+       flex-direction: column;
+-      padding: 0 30px;
++      width: 100%;
++      max-width: 800px;
++      margin: auto;
      }
  
--    /* .container-analyzed-text {
-+    .container-analyzed-text {
-       padding: 50px 20px 0 20px;
--    } */
-+    }
- 
-     @media (min-width: 767px) {
-       .container-analyzed-text {
-@@ -129,7 +129,6 @@
-         margin: auto;
-         max-width: 950px;
-         padding: 100px;
--        border: 1px solid red;
+     .container #inputData {
+@@ -81,10 +83,11 @@
        }
      }
-   </style>
+ 
+-    @media (max-width: 768px) {
++    @media (max-width: 900px) {
+       .container {
+         display: flex;
+         flex-direction: column;
++        padding: 0 30px;
+       }
+ 
+       button {

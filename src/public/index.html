@@ -67,7 +67,9 @@
     .container {
       display: flex;
       flex-direction: column;
-      padding: 0 30px;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
     }
 
     .container #inputData {
@@ -81,10 +83,11 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .container {
         display: flex;
         flex-direction: column;
+        padding: 0 30px;
       }
 
       button {
