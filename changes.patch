@@ -1,57 +1,116 @@
-diff --git a/changes.patch b/changes.patch
-index 9f208c1..e69de29 100644
---- a/changes.patch
-+++ b/changes.patch
-@@ -1,24 +0,0 @@
+diff --git a/alter.patch b/alter.patch
+deleted file mode 100644
+index d526eb4..0000000
+--- a/alter.patch
++++ /dev/null
+@@ -1,35 +0,0 @@
 -diff --git a/src/public/index.html b/src/public/index.html
--index 6e6e997..9a1d733 100644
+-index e809156..4dcd8ec 100644
 ---- a/src/public/index.html
 -+++ b/src/public/index.html
--@@ -119,9 +119,9 @@
--       padding: 0 10px;
+-@@ -69,7 +69,6 @@
+-       flex-direction: column;
+-       width: 100%;
+-       max-width: 800px;
+--      margin: auto;
 -     }
 - 
---    /* .container-analyzed-text {
--+    .container-analyzed-text {
--       padding: 50px 20px 0 20px;
---    } */
--+    }
+-     .container #inputData {
+-@@ -138,13 +137,15 @@
+- </head>
 - 
--     @media (min-width: 767px) {
--       .container-analyzed-text {
--@@ -129,7 +129,6 @@
--         margin: auto;
--         max-width: 950px;
--         padding: 100px;
---        border: 1px solid red;
+- <body>
+--  <div class="container">
+--    <h1>Resuma vídeo do youtube em texto</h1>
+--    <label for="fname">Resumo vídeo do youtube em texto:</label>
+--    <input type="text" id="inputData" placeholder="cole link de um vídeo do youtube aqui">
+--    <button onclick="buscarDados()">ANALISAR VÍDEO</button>
+--    <div class="container-analyzed-text">
+--      <p class="analyzed-text"></p>
+-+  <div style="display: flex; justify-content: center;">
+-+    <div class="container">
+-+      <h1>Resuma vídeo do youtube em texto</h1>
+-+      <label for="fname">Resumo vídeo do youtube em texto:</label>
+-+      <input type="text" id="inputData" placeholder="cole link de um vídeo do youtube aqui">
+-+      <button onclick="buscarDados()">ANALISAR VÍDEO</button>
+-+      <div class="container-analyzed-text">
+-+        <p class="analyzed-text"></p>
+-+      </div>
+-     </div>
+-   </div>
+-   <!-- Container para o círculo de carregamento -->
+diff --git a/changes.patch b/changes.patch
+index c76e76c..e69de29 100644
+--- a/changes.patch
++++ b/changes.patch
+@@ -1,57 +0,0 @@
+-diff --git a/changes.patch b/changes.patch
+-index 9f208c1..e69de29 100644
+---- a/changes.patch
+-+++ b/changes.patch
+-@@ -1,24 +0,0 @@
+--diff --git a/src/public/index.html b/src/public/index.html
+--index 6e6e997..9a1d733 100644
+----- a/src/public/index.html
+--+++ b/src/public/index.html
+--@@ -119,9 +119,9 @@
+--       padding: 0 10px;
+--     }
+-- 
+---    /* .container-analyzed-text {
+--+    .container-analyzed-text {
+--       padding: 50px 20px 0 20px;
+---    } */
+--+    }
+-- 
+--     @media (min-width: 767px) {
+--       .container-analyzed-text {
+--@@ -129,7 +129,6 @@
+--         margin: auto;
+--         max-width: 950px;
+--         padding: 100px;
+---        border: 1px solid red;
+--       }
+--     }
+--   </style>
+-diff --git a/src/public/index.html b/src/public/index.html
+-index 9a1d733..e809156 100644
+---- a/src/public/index.html
+-+++ b/src/public/index.html
+-@@ -67,7 +67,9 @@
+-     .container {
+-       display: flex;
+-       flex-direction: column;
+--      padding: 0 30px;
+-+      width: 100%;
+-+      max-width: 800px;
+-+      margin: auto;
+-     }
+- 
+-     .container #inputData {
+-@@ -81,10 +83,11 @@
 -       }
 -     }
--   </style>
+- 
+--    @media (max-width: 768px) {
+-+    @media (max-width: 900px) {
+-       .container {
+-         display: flex;
+-         flex-direction: column;
+-+        padding: 0 30px;
+-       }
+- 
+-       button {
 diff --git a/src/public/index.html b/src/public/index.html
-index 9a1d733..e809156 100644
+index 4dcd8ec..2095b15 100644
 --- a/src/public/index.html
 +++ b/src/public/index.html
-@@ -67,7 +67,9 @@
-     .container {
-       display: flex;
-       flex-direction: column;
--      padding: 0 30px;
-+      width: 100%;
-+      max-width: 800px;
-+      margin: auto;
-     }
+@@ -164,7 +164,7 @@
  
-     .container #inputData {
-@@ -81,10 +83,11 @@
-       }
-     }
- 
--    @media (max-width: 768px) {
-+    @media (max-width: 900px) {
-       .container {
-         display: flex;
-         flex-direction: column;
-+        padding: 0 30px;
-       }
- 
-       button {
+       try {
+         // Envia o valor do input como JSON no corpo da requisição
+-        const responseText = await fetch('https://9295-45-187-170-137.ngrok-free.app/analyze-video', {
++        const responseText = await fetch('https://f49f-45-187-170-137.ngrok-free.app/analyze-video', {
+           method: 'POST',
+           headers: {
+             'Content-Type': 'application/json'
