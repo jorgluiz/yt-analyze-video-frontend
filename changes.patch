@@ -1,0 +1,13 @@
+diff --git a/src/public/index.html b/src/public/index.html
+index 8228482..113bb36 100644
+--- a/src/public/index.html
++++ b/src/public/index.html
+@@ -164,7 +164,7 @@
+ 
+       try {
+         // Envia o valor do input como JSON no corpo da requisição
+-        const responseText = await fetch('https://7341-45-187-170-137.ngrok-free.app/analyze-video', {
++        const responseText = await fetch('https://d098-45-187-170-137.ngrok-free.app/analyze-video', {
+           method: 'POST',
+           headers: {
+             'Content-Type': 'application/json'
